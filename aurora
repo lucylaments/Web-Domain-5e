@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+  <info>
+    <name>Web Domain</name>
+    <description>The Web Domain from the Wildwood campaign setting.</description>
+    <author url="http://dnd.wizards.com/products/tabletop-games/rpg-products/xanathars-guide-everything">Wildwood Setting</author>
+    <update version="0.1.3">
+      <file name="cleric-webdomain.xml" url="" />
+    </update>
+  </info>
+
+  <element naWeb" type="Archetype" source="d" id="ID_WILDWOOD_ARCHETYPE_CLERIC_FORGE_DOMAIN">
+    <supports>Divine Domain</supports>
+    <description>
+      <p>The clerics of the Web gods value control and connection. They don't meet others to create friendships, they meet others to expand their network of people they can use. </p>
+      <div element="ID_WILDWOOD_ARCHETYPE_FEATURE_FORGE_DOMAIN_DOMAIN_SPELLS" />
+      <div element="ID_WILDWOOD_ARCHETYPE_FEATURE_FORGE_DOMAIN_BONUS_PROFICIENCIES" />
+      <div element="ID_WILDWOOD_ARCHETYPE_FEATURE_FORGE_DOMAIN_BLESSING_OF_THE_FORGE" />
+      <div element="ID_WILDWOOD_ARCHETYPE_FEATURE_FORGE_DOMAIN_CD_ARTISANS_BLESSING" />
+      <div element="ID_WILDWOOD_ARCHETYPE_FEATURE_FORGE_DOMAIN_SOUL_OF_THE_FORGE" />
+      <div element="ID_WILDWOOD_ARCHETYPE_FEATURE_FORGE_DOMAIN_DIVINE_STRIKE" />
+      <div element="ID_WILDWOOD_ARCHETYPE_FEATURE_FORGE_DOMAIN_SAINT_OF_FORGE_AND_FIRE" />
+    </description>
+    </sheet>
+    <rules>
+      <grant type="Archetype Feature" id="ID_WILDWOOD_ARCHETYPE_FEATURE_WEB_DOMAIN_DOMAIN_SPELLS" level="1"/>
+      <grant type="Archetype Feature" id="ID_WILDWOOD_ARCHETYPE_FEATURE_WEB_DOMAIN_BONUS_PROFICIENCIES" level="1"/>
+      <grant type="Archetype Feature" id="ID_WILWOOD_ARCHETYPE_FEATURE_WEB_DOMAIN_CD_WEB_OF_CONNECTION" level="2"/>
+      <grant type="Archetype Feature" id="ID_WILDWOOD_ARCHETYPE_FEATURE_WEB_DOMAIN_PUPPET_MASTER" level="6"/>
+      <grant type="Archetype Feature" id="ID_WILDWOOD_ARCHETYPE_FEATURE_WEB_DOMAIN_DIVINE_STRIKE" level="8"/>
+      <grant type="Archetype Feature" id="ID_WILDWOOD_ARCHETYPE_FEATURE_WEB_DOMAIN_IMPROVED_WEB" level="17"/>
+    </rules>
+  </element>
+  
+  <element name="Domain Spells" type="Archetype Feature" source="Wildwood Setting" id="ID_WILDWOOD_ARCHETYPE_FEATURE_FORGE_DOMAIN_DOMAIN_SPELLS">
+    <description>
+      <p>You gain domain spells at the cleric levels listed in the Web Domain Spells table. See the Divine Domain class feature for how domain spells work.</p>
+      <h5>Web Domain Spells</h5>
+      <table>
+        <thead>
+          <tr><td>Cleric Level</td><td>Spells</td></tr>
+        </thead>
+        <tr><td>1st</td><td><em>ceremony, puppet</em></td></tr>
+        <tr><td>3rd</td><td><em>crown of madness, web</em></td></tr>
+        <tr><td>5th</td><td><em>sending, life transference</em></td></tr>
+        <tr><td>7th</td><td><em>death ward, banishment</em></td></tr> 
+        <tr><td>9th</td><td><em>modify memory, geas</em></td></tr>
+      </table>
+    </description>
+    <sheet display="false">
+      <description></description>
+    </sheet>
+    <rules>
+      <grant type="Spell" id="XGTE_PHB_SPELL_CEREMONY" level="1" spellcasting="Cleric" prepared="true" />
+      <grant type="Spell" id="ID_UA_SPELL_PUPPET" level="1" spellcasting="Cleric" prepared="true" />
+      <grant type="Spell" id="ID_PHB_SPELL_WEB" level="3" spellcasting="Cleric" prepared="true" />
+      <grant type="Spell" id="ID_PHB_SPELL_CROWN_OF_MADNESS" level="3" spellcasting="Cleric" prepared="true" />
+      <grant type="Spell" id="ID_PHB_SPELL_SENDING" level="5" spellcasting="Cleric" prepared="true" />
+      <grant type="Spell" id="ID_XGTE_SPELL_LIFE_TRANSFERENCE" level="5" spellcasting="Cleric" prepared="true" />
+      <grant type="Spell" id="ID_PHB_SPELL_DEATH_WARD" level="7" spellcasting="Cleric" prepared="true" />
+      <grant type="Spell" id="ID_PHB_SPELL_BANISHMENT" level="7" spellcasting="Cleric" prepared="true" />
+      <grant type="Spell" id="ID_PHB_SPELL_MODIFY_MEMORY" level="9" spellcasting="Cleric" prepared="true" />
+      <grant type="Spell" id="ID_PHB_SPELL_GEAS" level="9" spellcasting="Cleric" prepared="true" />
+    </rules>
+  </element> 
+  <element name="Bonus Proficiencies" type="Archetype Feature" source="d" id="ID_WILDWOODS_ARCHETYPE_FEATURE_WEB_DOMAIN_BONUS_PROFICIENCIES">
+    <description>
+      <p>When you choose this domain at first level, you gain proficiency in the Deception and Persuasion Skills.</p>
+    </description>
+    <sheet display="false">
+    </sheet>
+    <rules>
+      <grant type="Proficiency" id="ID_PROFICIENCY_DECEPTION" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_PERSUASION" />
+    </rules>
+  </element> 
+  </element> 
+  <element name="Channel Divinity: Web of Connection" type="Archetype Feature" source="Wildwood Setting" id="ID_WILDWOODS_ARCHETYPE_FEATURE_WEB_DOMAIN_CD_WEB_OF_CONNECTION">
+    <description>
+      <p>Starting at 2nd level, you can use your Channel Divinity to connect the damage you do to enemies.</p>
+      
+    </description>
+    <sheet alt="Web of Connection" usage="Channel Divinity">
+      <description>
+      <p> Starting at 2nd level, you can use your Channel Divinity to connect the damage you do to enemies.</p>
+      <p> After you make a successful attack or spell roll but before you roll your damage die, you may choose to connect the damage between a number of creatures equal to your proficiency bonus that are within 30 feet.</p>
+      <p> Roll your damage die and divide the amount of damage rolled between your chosen creatures.</p>
+    </sheet>
+  </element> 
+  <element name="Puppet Master" type="Archetype Feature" source="d" id="ID_WILDWOOD_ARCHETYPE_FEATURE_FORGE_DOMAIN_SOUL_OF_THE_FORGE">
+    <description>
+      <p>At 6th level, you become remarkabl adept at controlling others:</p>
+      <ul>
+        <li>If you use any spell from the school of enchantment, you may choose to give disadvantage to the creature going against you.</li>
+        <li>You may do this a number of times equal to your wisdom modifier per long rest.</li>
+      </ul>
+    </description>
+    </sheet>
+    <rules>
+  </element> 
+  <element name="Improved Web" type="Archetype Feature" source="Wildwood Setting" id="ID_WILDWOOD_ARCHETYPE_FEATURE_WEB_DOMAIN_IMPROVED_WEB">
+    <description level="17">
+      <p>At 17th level, you’ve heightened your divine abilities:</p>
+      <ul>
+        <li>Your Channel Divinity now has a range of 60 feet.</li>
+        <li>You can now choose an amount of creatures equal to your proficiency bonus plus your wisdom modifier.</li>
+      </ul>
+    </description>
+    </sheet>
+    </rules>
+  </element> 
+</elements>
